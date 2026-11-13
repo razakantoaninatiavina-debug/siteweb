@@ -1,0 +1,160 @@
+/* Couleurs et polices : modifie-les ici pour changer tout le site */
+:root {
+  --papier: #fafbfd;
+  --quadrillage: #dfe5ef;
+  --encre: #1b2a49;
+  --encre-douce: #4a587a;
+  --accent: #2f5bea;
+  --surligneur: #ffe27a;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--encre);
+  background-color: var(--papier);
+  /* Fond façon papier quadrillé */
+  background-image:
+    linear-gradient(var(--quadrillage) 1px, transparent 1px),
+    linear-gradient(90deg, var(--quadrillage) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--encre); }
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* En-tête */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--encre);
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+
+.site-header nav a {
+  color: var(--encre-douce);
+  text-decoration: none;
+}
+
+.site-header nav a:hover { color: var(--encre); text-decoration: underline; }
+
+/* Mise en page principale */
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section { padding: 3.5rem 0 0; max-width: 42rem; }
+
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; margin: 0 0 1rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.1rem); }
+h2 {
+  font-size: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--encre);
+}
+h3 { font-size: 1.2rem; margin-bottom: 0.35rem; }
+
+p { margin: 0 0 1rem; }
+
+/* Accueil */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: none;
+  padding-top: 4rem;
+}
+
+.lead { font-size: 1.2rem; color: var(--encre-douce); }
+
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  color: var(--encre);
+  text-decoration: none;
+  background: var(--surligneur);
+  border: 2px solid var(--encre);
+  border-radius: 4px;
+}
+
+.button:hover { background: var(--encre); color: var(--papier); }
+
+.hero-graph { width: 100%; height: auto; background: var(--papier); border: 2px solid var(--encre); }
+.axis { stroke: var(--encre); stroke-width: 1.5; }
+.curve { fill: none; stroke: var(--accent); stroke-width: 3; }
+.dot { fill: var(--surligneur); stroke: var(--encre); stroke-width: 2; }
+.graph-label { font-family: var(--serif); font-size: 18px; font-style: italic; fill: var(--encre); }
+
+/* Projets */
+.project-list { list-style: none; margin: 0; padding: 0; }
+
+.project-list li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--quadrillage);
+  background: var(--papier);
+}
+
+.project-list p { margin-bottom: 0.25rem; }
+.meta { font-size: 0.95rem; color: var(--encre-douce); }
+
+/* Compétences */
+.skills { margin: 0; background: var(--papier); }
+.skills dt { font-weight: 700; margin-top: 1rem; }
+.skills dd { margin: 0; color: var(--encre-douce); }
+
+/* Sections de texte : fond uni pour garder le quadrillage hors du texte */
+#apropos, #contact { background: var(--papier); }
+
+/* Pied de page */
+.site-footer {
+  max-width: 62rem;
+  margin: 4rem auto 0;
+  padding: 1.5rem;
+  color: var(--encre-douce);
+  border-top: 1px solid var(--quadrillage);
+  background: var(--papier);
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding-top: 2.5rem; }
+  section { padding-top: 2.75rem; }
+}
+

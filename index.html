@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiavina – Portfolio</title>
+  <meta name="description" content="Étudiant en mathématiques et développement mobile et web.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#accueil">Tiavina</a>
+    <nav aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-text">
+        <h1>Je transforme des problèmes en algorithmes, puis en applications.</h1>
+        <p class="lead">Étudiant en mathématiques et en développement mobile et web. J’aime comprendre comment les choses fonctionnent avant de les construire.</p>
+        <a class="button" href="#projets">Voir mes projets</a>
+      </div>
+
+      <svg class="hero-graph" viewBox="0 0 400 240" role="img" aria-label="Courbe de la fonction y égale x au carré">
+        <line x1="10" y1="180" x2="390" y2="180" class="axis"/>
+        <line x1="200" y1="10" x2="200" y2="230" class="axis"/>
+        <path d="M40 20 Q200 340 360 20" class="curve"/>
+        <circle cx="200" cy="180" r="5" class="dot"/>
+        <text x="290" y="60" class="graph-label">y = x²</text>
+      </svg>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos</h2>
+      <p>Je suis étudiant à l’université. Mes cours mêlent calcul multivariable, algèbre linéaire, programmation linéaire et développement Android. Je m’intéresse aussi au scripting Linux et au DevOps.</p>
+      <p>Ce site est mon carnet de bord : j’y rassemble ce que je construis et ce que j’apprends.</p>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+      <ul class="project-list">
+        <li>
+          <h3>Application Android</h3>
+          <p>Une application mobile en Kotlin avec Jetpack Compose.</p>
+          <p class="meta">Kotlin, Jetpack Compose</p>
+        </li>
+        <li>
+          <h3>Résolution de problèmes d’optimisation</h3>
+          <p>Modélisation et résolution de problèmes de programmation linéaire.</p>
+          <p class="meta">Python, mathématiques</p>
+        </li>
+        <li>
+          <h3>Scripts d’automatisation</h3>
+          <p>Des scripts Bash pour automatiser des tâches sous Linux.</p>
+          <p class="meta">Bash, Linux, Git</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <dl class="skills">
+        <dt>Mathématiques</dt>
+        <dd>Calcul multivariable, algèbre linéaire, programmation linéaire</dd>
+        <dt>Développement</dt>
+        <dd>HTML, CSS, Kotlin, Jetpack Compose</dd>
+        <dt>Outils</dt>
+        <dd>Linux, Bash, Git et GitHub, VirtualBox</dd>
+      </dl>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Une question ou une idée de projet ? Écris-moi.</p>
+      <p><a href="mailto:ton@email.com">ton@email.com</a></p>
+      <p><a href="https://github.com/TonNom">github.com/TonNom</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Tiavina</p>
+  </footer>
+
+</body>
+</html>
+
